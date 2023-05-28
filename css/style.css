@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  overflow-x: hidden;
+}
+/* Basic CSS */
+.slider-container .slider-content {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+}
+.slider-container .slider-content::before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.15;
+  z-index: -1;
+  
+}
+.slide-prev,
+.slide-next 
+{
+  position: absolute;
+  z-index: 99;
+  bottom: 15%;
+  left: 20%;
+  color: white;
+  cursor: pointer;
+}
+.slide-next {
+  left: 35%;
+}
+.slick-track{
+  will-change: transform;
+}
+
+
+.slick-list{
+  overflow: visible;
+  will-change: transform;
+}
+
+.slick-slide{
+  padding: 0 100px;
+  width: 100vw;
+  filter: drop-shadow(0px 10px 40px rgba(0,0,0,0.55));
+}
+
+.slick-slide img{
+  width: 100%;
+  height: 100%;
+}
+.do-transition {
+  animation: motion-blur 0.1s linear forwards;
+}
+@keyframes motion-blur {
+  0% {
+      filter: url(#blur0);
+      transform: scale(0, 1);
+  }
+  15% {
+      filter: url(#blur1);
+      transform: scale(0, 1);
+  }
+  30% {
+      filter: url(#blur2);
+      transform: scale(1, 1);
+  }
+  45% {
+      filter: url(#blur3);
+      transform: scale(1.1, 1);
+  }
+  60% {
+      filter: url(#blur4);
+      transform: scale(1.2, 1);
+  }
+  75%,100% {
+      filter: url(#blur5);
+      transform: scale(1.3, 1);
+  }
+}
+.do-transition {
+  animation: motion-blur 0.1s linear forwards;
+}
+.do-tans {
+  animation: motion-blur 0.1s linear forwards,
+          motion-blur 0.1s linear reverse forwards 0.1s; 
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Blur Slider</title>
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Slick Css -->
+    <link rel="stylesheet" href="css/slick.css">
+</head>
+<body>
+  <svg id="Layer" class="d-none">
+    <defs>
+      <filter id="blur0">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="0 0">
+      </filter>
+      <filter id="blur1">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10 0">
+      </filter>
+      <filter id="blur2">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="20 0">
+      </filter>
+      <filter id="blur3">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="30 0">
+      </filter>
+      <filter id="blur4">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="50 1">
+      </filter>
+      <filter id="blur5">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="100 1">
+      </filter>
+    </defs>
+  </svg>
+  <div class="slider-container">
+    <div class="slider-content" style="background-image: url(images/1.jpg);">
+       <div class="slider-content">
+        
+       </div>
+    </div>
+    <div class="slider-content" style="background-image: url(images/2.jpg);">
+      <div class="slider-content">
+       
+      </div>
+   </div>
+   <div class="slider-content" style="background-image: url(images/3.jpg);">
+    <div class="slider-content">
+    </div>
+ </div>
+ </div>
+ <span class="slide-prev d-none">PREV</span>
+ <span class="slide-next d-none">NEXT</span>
+    
+
+
+
+
+
+   
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <!-- Custom Css -->
+    <script src="js/main.js"></script>
+</body>
+</html>
